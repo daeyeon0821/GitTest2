@@ -10,8 +10,18 @@ namespace GitTestApp
     {
         static void Main(string[] args)
         {
-            Ruler ruler = new Ruler(10);
+            // {    2022. 11. 25    Add feature - User input / Beta
+            string userInput = string.Empty;
+            Console.WriteLine("This program convert Cm to Inch");
+            Console.Write("Input Cm value : ");
+            userInput = Console.ReadLine();
+
+            int cmInput = 0;
+            int.TryParse(userInput, out cmInput);
+
+            Ruler ruler = new Ruler(cmInput);
             ruler.Run();
+            // }    2022. 11. 25    Add feature - User input / Beta
         }
     }
 
