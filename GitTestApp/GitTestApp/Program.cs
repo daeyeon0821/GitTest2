@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitTestApp
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Ruler ruler = new Ruler(10);
-            ruler.Run();
-        }
-    }
-
+    // {    2022. 11. 25 Change code style - Ruler class / Alpha
     public class Ruler
     {
         private const float ONE_INCH = 2.54F;
@@ -29,6 +21,16 @@ namespace GitTestApp
         public void Run()
         {
             Console.WriteLine($"{this.Centimeter}cm 는 {this.Inch}inch 입니다.");
+        }
+    }
+    // }    2022. 11. 25 Change code style - Ruler class / Alpha
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Ruler ruler = new Ruler(10);
+            ruler.Run();
         }
     }
 }
